@@ -7,6 +7,7 @@ gem 'pg'
 # in production environments by default.
 group :assets do
   gem 'coffee-rails', '~> 4.0.0.beta1'
+  gem 'compass-rails'
   gem 'sass-rails',   '~> 4.0.0.beta1'
   gem 'uglifier', '>= 1.0.3'
 end
