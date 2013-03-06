@@ -12,6 +12,19 @@ group :assets do
 end
 
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'haml-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'unicorn'
+gem 'puma'
+
+group :production do
+end
+
+group :development do
+end
+
+group :development, :test do
+end
+
+group :test do
+end
