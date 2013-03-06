@@ -24,7 +24,14 @@ group :development do
 end
 
 group :development, :test do
+  gem 'capybara'
+  gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :test do
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'poltergeist'
+  gem 'turnip'
 end
