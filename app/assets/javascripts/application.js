@@ -10,4 +10,6 @@
 //= require underscore
 //= require_self
 //= require memoriae
-Memoriae = Ember.Application.create();
+Memoriae = Ember.Application.create({
+  LOG_TRANSITIONS: true
+});
