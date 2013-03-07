@@ -1,5 +1,5 @@
 Memoriae.Router.map ->
-  @resource('page')
-  @resource('post',
-    path: '/posts/:post_id'
+  @resource('pages')
+  @resource('pages',
+    path: '/pages/:page_id'
   )
