@@ -13,17 +13,21 @@ end
 
 gem 'active_model_serializers'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'decent_exposure'
 gem 'devise'
 gem 'ember-rails'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'puma'
+gem 'underscore-rails'
 
 group :production do
 end
 
 group :development do
+  gem 'hpricot'
+  gem 'ruby_parser'
 end
 
 group :development, :test do
