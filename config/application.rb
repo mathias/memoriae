@@ -26,5 +26,10 @@ module Memoriae
 
     # Don't access DB or load models when precompiling assets
     config.assets.initialize_on_precompile = false
+
+    # Don't render JavaScript for logged-out users:
+    config.to_prepare do
+      Devise::SessionsController.layout "session"
+    end
   end
 end
