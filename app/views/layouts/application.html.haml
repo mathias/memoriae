@@ -5,9 +5,9 @@
     %meta{:content => "A datastore", :name => "description"}
     %meta{:content => "Matt Gauger", :name => "author"}
     %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = yield
     = button_to 'Logout', destroy_user_session_path, method: :delete
+    = yield

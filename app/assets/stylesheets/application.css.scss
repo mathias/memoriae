@@ -3,10 +3,11 @@
 
 // Frameworks:
 @import "bourbon";
+@import "partials/grid_settings";
 @import "neat";
 
 // Our custom CSS:
+@import "partials/colors";
 @import "partials/base";
 @import "partials/fonts";
-@import "partials/colors";
 @import "partials/grid";
