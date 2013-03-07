@@ -27,4 +27,7 @@ Memoriae::Application.configure do
 
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
+
+  # Ember settings
+  config.ember.variant = :development
 end

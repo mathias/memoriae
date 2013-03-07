@@ -11,8 +11,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'active_model_serializers'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'devise'
+gem 'ember-rails'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
