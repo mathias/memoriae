@@ -9,5 +9,5 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = button_to 'Logout', destroy_user_session_path, method: :delete
     = yield
+    = button_to 'Logout', destroy_user_session_path, method: :delete
