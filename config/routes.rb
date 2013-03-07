@@ -1,6 +1,5 @@
 Memoriae::Application.routes.draw do
-  resources :pages
-
   devise_for :users
-  root to: 'pages#home'
+
+  root to: 'high_voltage/pages#show', id: 'home'
 end
