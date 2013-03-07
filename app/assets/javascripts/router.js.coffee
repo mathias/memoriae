@@ -1,2 +1,4 @@
 Memoriae.Router.map ->
-  return false
+  @resource('articles', ->
+    @resource('notes')
+  )

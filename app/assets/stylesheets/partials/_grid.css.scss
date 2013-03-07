@@ -8,6 +8,7 @@ body {
 
     @include size(100% 45px);
     h1 {
+      color: $white;
       @include span-columns(2);
     }
     nav {
