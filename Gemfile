@@ -13,6 +13,7 @@ end
 
 gem 'active_model_serializers'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bourbon'
 gem 'decent_exposure'
 gem 'devise'
 gem 'ember-rails'
