@@ -1,7 +1,7 @@
 Memoriae::Application.routes.draw do
-  resources :notes
-
-  resources :articles
+  resources :articles do
+    resources :notes
+  end
 
   devise_for :users
 
