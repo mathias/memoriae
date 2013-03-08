@@ -29,5 +29,5 @@ Memoriae::Application.configure do
   config.assets.debug = true
 
   # Ember settings
-  config.ember.variant = :development
+  # config.ember.variant = :development
 end

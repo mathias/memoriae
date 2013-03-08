@@ -35,5 +35,5 @@ Memoriae::Application.configure do
   config.active_support.deprecation = :stderr
 
   # Ember env:
-  config.ember.variant = :production
+  # config.ember.variant = :production
 end

@@ -79,5 +79,5 @@ Memoriae::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Ember env:
-  config.ember.variant = :production
+  # config.ember.variant = :production
 end
