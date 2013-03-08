@@ -35,6 +35,8 @@ end
 
 group :development, :test do
   gem 'capybara'
+  gem 'factory_girl'
+  gem 'faker'
   gem 'pry-rails'
   gem 'rspec-rails'
 end

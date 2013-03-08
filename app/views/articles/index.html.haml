@@ -1,2 +1,3 @@
 = link_to "Add +", new_article_path
-= render partial: 'article_link', collection: articles, as: :article
+%ul#article_list
+  = render partial: 'article_link', collection: articles, as: :article
