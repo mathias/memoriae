@@ -1,0 +1,20 @@
+#actions {
+  a.add_button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: $nephritis;
+    color: $white;
+    text-decoration: none;
+  }
+  a:hover.add_button {
+    background: $emerald;
+  }
+}
+
+form.sign_out_button input {
+  background: $dark-background;
+  border: none;
+  color: $white;
+  font-size: 20px;
+  text-decoration: none;
+}

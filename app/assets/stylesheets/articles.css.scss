@@ -1,8 +1,19 @@
 .container {
+  #actions {
+    @include shift(10);
+    text-align: right;
+  }
+
   article {
     .entry-content {
       @include span-columns(10);
       @include shift(1);
+    }
+  }
+
+  #article_list {
+    li {
+      margin-bottom: 1em;
     }
   }
 }

@@ -1,6 +1,7 @@
-header {
+body > header {
   a {
-    color: $light-grey;
+    line-height: 45px;
+    color: $white;
     text-decoration: none;
   }
   a:hover {
