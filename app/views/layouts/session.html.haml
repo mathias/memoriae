@@ -5,4 +5,15 @@
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = yield
+    %header
+      .container
+        = link_to root_path do
+          %h1 Memoriae
+
+    .container
+      = yield
+
+    %footer
+      .container
+        ©2013
+        = link_to 'Matt Gauger', 'https://github.com/mathias'

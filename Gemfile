@@ -20,8 +20,9 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'jquery-rails'
 gem 'neat'
-gem 'turbolinks'
+gem 'paper_trail'
 gem 'puma'
+gem 'turbolinks'
 gem 'underscore-rails'
 
 group :production do

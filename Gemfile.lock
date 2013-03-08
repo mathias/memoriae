@@ -101,6 +101,9 @@ GEM
       sass (>= 3.2)
     nokogiri (1.5.6)
     orm_adapter (0.0.7)
+    paper_trail (1.6.4)
+      actionpack (>= 2.3)
+      activerecord (>= 2.3)
     pg (0.14.1)
     poltergeist (1.1.0)
       capybara (~> 2.0, >= 2.0.1)
@@ -216,6 +219,7 @@ DEPENDENCIES
   hpricot
   jquery-rails
   neat
+  paper_trail
   pg
   poltergeist
   pry-rails
