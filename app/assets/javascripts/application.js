@@ -4,6 +4,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require handlebars
 //= require underscore
 //= require_self
