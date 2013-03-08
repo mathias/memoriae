@@ -6,5 +6,18 @@ body > header {
   }
   a:hover {
     color: $white;
+    text-decoration: underline;
+  }
+
+  form.sign_out_button input {
+    background: $dark-background;
+    border: none;
+    color: $white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  form.sign_out_button input:hover {
+    text-decoration: underline;
   }
 }
