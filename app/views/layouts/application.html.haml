@@ -9,5 +9,19 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = button_to 'Logout', destroy_user_session_path, method: :delete
-    = yield
+    %header
+      .container
+        = link_to root_path do
+          %h1 Memoriae
+        %nav
+          %ul
+            %li
+              = button_to 'Logout', destroy_user_session_path, method: :delete
+
+    .container
+      = yield
+
+    %footer
+      .container
+        ©2013
+        = link_to 'Matt Gauger', 'https://github.com/mathias'
