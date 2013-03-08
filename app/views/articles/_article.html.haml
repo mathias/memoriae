@@ -1,0 +1,16 @@
+%article
+  %h2= article.title
+
+  - if article.original_url?
+    = link_to article.original_domain, article.original_url
+  %footer
+    %ul
+      %li
+        Published on:
+        %time= article.date_published.to_date.to_formatted_s(:long_ordinal)
+      %li
+        Captured on:
+        %time= article.date_ingested.to_date.to_formatted_s(:long_ordinal)
+
+  .entry-content
+    = raw article.body
