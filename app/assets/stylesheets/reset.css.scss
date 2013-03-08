@@ -63,3 +63,7 @@ a img { border: none; }
 
 /* Remember to define your own focus styles! */
 :focus { outline: 0; }
+
+ul, ol {
+  list-style-position: inside;
+}
