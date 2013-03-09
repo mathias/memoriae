@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
 
   def create
     article.date_ingested ||= Time.now
+    article.body = params[:article][:body].squish
 
     if article.save
       redirect_to(articles_path)
@@ -13,6 +14,8 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    article.body = params[:article][:body].squish
+
     if article.save
       redirect_to(articles_path)
     else
@@ -23,6 +26,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :body, :date_published, :date_ingested)
+    params.require(:article).permit(:title, :body, :date_published, :date_ingested, :original_url)
   end
 end

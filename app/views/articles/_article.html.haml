@@ -13,4 +13,4 @@
         %time= article.date_ingested.to_date.to_formatted_s(:long_ordinal)
 
   .entry-content
-    = raw article.body
+    = sanitize article.body
