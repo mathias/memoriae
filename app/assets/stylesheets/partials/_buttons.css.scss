@@ -10,3 +10,14 @@
     background: $emerald;
   }
 }
+
+form.formtastic {
+  input[type=submit] {
+    border-radius: 5px;
+    border: 0;
+    padding: 5px 10px;
+    background: $nephritis;
+    color: $white;
+    text-decoration: none;
+  }
+}
