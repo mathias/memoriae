@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  expose(:articles)
+  expose(:articles) { Article.scoped.order('date_ingested DESC') }
   expose(:article, attributes: :article_params)
 
   def create
