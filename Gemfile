@@ -23,6 +23,7 @@ gem 'high_voltage'
 gem 'jquery-rails'
 gem 'neat'
 gem 'puma'
+gem 'sidekiq'
 gem 'turbolinks'
 gem 'underscore-rails'
 

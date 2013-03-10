@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20130310200436) do
     t.datetime "date_ingested"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "ingest_state"
+    t.string   "ingest_state",   default: "new"
   end
 
   create_table "notes", force: true do |t|

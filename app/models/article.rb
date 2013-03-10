@@ -2,7 +2,6 @@ class Article < ActiveRecord::Base
   include AASM
 
   has_many :notes
-  validates_presence_of :date_ingested
 
   aasm column: 'ingest_state' do
     state :new, initial: true
