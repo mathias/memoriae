@@ -11,6 +11,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'aasm'
 gem 'active_model_serializers'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'bourbon'
