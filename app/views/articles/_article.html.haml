@@ -1,8 +1,9 @@
 %article
-  %h2= article.title
+  %header
+    %h2= article.title
 
-  - if article.original_url?
-    = link_to article.original_domain, article.original_url
+    - if article.original_url?
+      = link_to article.original_domain, article.original_url
   %footer
     %ul
       %li

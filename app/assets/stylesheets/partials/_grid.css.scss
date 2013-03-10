@@ -1,27 +1,25 @@
-body {
-  header {
-    //border-radius: 6px;
-    background-color: $dark-background;
-    color: $white;
-    line-height: 45px;
-    margin-bottom: 1em;
+body > header {
+  background-color: $dark-background;
+  color: $white;
+  line-height: 45px;
+  margin-bottom: 1em;
 
-    @include size(100% 45px);
-    h1 {
-      color: $white;
-      @include span-columns(2);
-    }
-    nav {
-      ul {
-        list-style-type: none;
-        li {
-          @include span-columns(2);
-          float: left;
-        }
+  @include size(100% 45px);
+  h1 {
+    color: $white;
+    @include span-columns(2);
+  }
+  nav {
+    ul {
+      list-style-type: none;
+      li {
+        @include span-columns(2);
+        float: left;
       }
     }
   }
-  header .container, .container, footer .container {
-    @include outer-container;
-  }
+}
+
+body > header .container, .container, body > footer .container {
+  @include outer-container;
 }

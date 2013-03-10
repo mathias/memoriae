@@ -5,6 +5,13 @@
   }
 
   article {
+    footer {
+      margin-bottom: 1em;
+
+      ul {
+        list-style: none;
+      }
+    }
     .entry-content {
       @include span-columns(10);
       @include shift(1);
