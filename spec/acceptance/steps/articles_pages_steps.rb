@@ -23,6 +23,14 @@ step 'I should see it in my list of articles' do
   end
 end
 
+step 'I should not see the article in my list of articles' do
+  @article_title ||= @article.title
+
+  within('#article_list') do
+    page.should_not have_content @article_title
+  end
+end
+
 step 'I follow the article link' do
   within('#article_list') do
     click_on @article.title
@@ -59,5 +67,11 @@ end
 step 'I should see the changed URL for that article' do
   within('#article_list') do
     page.should have_content @new_article_domain
+  end
+end
+
+step 'I click the delete article link' do
+  within('#article_list') do
+    click_on 'Delete'
   end
 end
