@@ -15,4 +15,6 @@
 /log/*.log
 /tmp
 
+# ignore secrets
 /config/initializers/secret_token.rb
+/config/credentials.yml
