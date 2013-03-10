@@ -43,3 +43,21 @@ step 'I should see the article body' do
     page.should have_content @article.body
   end
 end
+
+step 'I click the edit article link' do
+  within('#article_list') do
+    click_on 'Edit'
+  end
+end
+
+step 'I change the URL and submit it' do
+  @new_article_domain ||= Faker::Internet.domain_name
+  fill_in 'Original url', with: @new_article_domain
+  click_on 'Update Article'
+end
+
+step 'I should see the changed URL for that article' do
+  within('#article_list') do
+    page.should have_content @new_article_domain
+  end
+end

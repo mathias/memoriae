@@ -3,3 +3,4 @@
   - if article.original_url?
     = link_to article.original_domain, article.original_url
   %time= article.date_published.to_date.to_formatted_s(:long_ordinal)
+  = link_to "Edit", edit_article_path(article)
