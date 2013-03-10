@@ -3,9 +3,6 @@ class ArticlesController < ApplicationController
   expose(:article, attributes: :article_params)
 
   def create
-    article.date_ingested ||= Time.now
-    article.body = params[:article][:body].squish
-
     if article.save
       redirect_to(articles_path)
     else
@@ -14,8 +11,6 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    article.body = params[:article][:body].squish
-
     if article.save
       redirect_to(articles_path)
     else

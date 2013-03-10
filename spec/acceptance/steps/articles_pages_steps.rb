@@ -3,12 +3,9 @@ step 'I click the add new article link' do
 end
 
 step 'I fill in the new article form' do
-  @article_title = Faker::Lorem.sentence
+  @article_domain ||= Faker::Internet.domain_name
 
-  fill_in 'Title', with: @article_title
-  fill_in 'Original url', with: Faker::Internet.url
-  fill_in 'Body', with: Faker::Lorem.paragraphs(4).join('\n\n')
-  fill_in 'Date published', with: 2.days.ago
+  fill_in 'Original url', with: @article_domain
 
   click_on 'Create Article'
 end
@@ -19,7 +16,7 @@ end
 
 step 'I should see it in my list of articles' do
   within('#article_list') do
-    page.should have_content @article_title
+    page.should have_content @article_domain
   end
 end
 
