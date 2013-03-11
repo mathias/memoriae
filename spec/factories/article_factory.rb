@@ -1,9 +1,13 @@
 FactoryGirl.define do
   factory :article do
-    title { Faker::Lorem.sentence }
-    body { Faker::Lorem.paragraphs(4).join('\n\n') }
     original_url { Faker::Internet.url }
     date_published { 2.days.ago }
-    date_ingested { Time.now }
+
+    trait :ingested do
+      title { Faker::Lorem.sentence }
+      body { Faker::Lorem.paragraphs(4).join('\n\n') }
+      date_ingested { Time.now }
+      ingest_state { 'ingested' }
+    end
   end
 end
