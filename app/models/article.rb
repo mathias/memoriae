@@ -3,6 +3,8 @@ class Article < ActiveRecord::Base
 
   has_many :notes
 
+  after_save :ingest_article
+
   aasm column: 'ingest_state' do
     state :new, initial: true
     state :ingested
@@ -17,6 +19,10 @@ class Article < ActiveRecord::Base
   end
 
   private
+  def ingest_article
+    ArticleIngestWorker.perform_async(self.id) if self.new?
+  end
+
   def set_date_ingested
     self.update_attributes(date_ingested: DateTime.now)
   end
