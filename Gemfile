@@ -52,4 +52,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'poltergeist'
   gem 'turnip'
+  gem 'vcr'
+  gem 'webmock', '~> 1.9.3'
 end
