@@ -5,13 +5,13 @@ end
 step 'I fill in the new article form' do
   @article_domain ||= Faker::Internet.domain_name
 
-  fill_in 'Original url', with: @article_domain
+  fill_in 'URL', with: @article_domain
 
   click_on 'Create Article'
 end
 
 step 'the new article should be captured' do
-  Article.count.should be 1
+  Article.count.should eq(1)
 end
 
 step 'I should see it in my list of articles' do
@@ -57,7 +57,7 @@ end
 
 step 'I change the URL and submit it' do
   @new_article_domain ||= Faker::Internet.domain_name
-  fill_in 'Original url', with: @new_article_domain
+  fill_in 'URL', with: @new_article_domain
   click_on 'Update Article'
 end
 
