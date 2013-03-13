@@ -52,3 +52,6 @@ tramp
 # Org-mode
 .org-id-locations
 *_archive
+
+# Redis stuff:
+dump.rdb
