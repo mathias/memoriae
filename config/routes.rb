@@ -12,5 +12,11 @@ Memoriae::Application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
+  resources :pages, only: [:show] do
+    collection do
+      get :tools
+    end
+  end
+
   root to: 'pages#home'
 end

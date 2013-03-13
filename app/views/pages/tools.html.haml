@@ -1,0 +1,11 @@
+%h1 Tools
+
+%h2 Bookmarklet
+
+%p Drag the following to your bookmarks bar:
+
+= link_to 'Post to Memoriae', 'javascript:window.location=%22http://memoriae.us:3000/articles/new?url=%22+encodeURIComponent(document.location)'
+
+%p Or if you are on mobile, copy the code in the text field below, bookmark this page, and then edit the bookmark and paste the code in place of the URL.
+
+= text_field_tag 'bookmarklet', 'javascript:window.location=%22http://memoriae.us:3000/articles/new?url=%22+encodeURIComponent(document.location)'
