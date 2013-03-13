@@ -1,4 +1,4 @@
-%li
+%li{id: "article-#{article.id}"}
   %h2= link_to article.title, article_path(article)
   = link_to article.original_domain, article.original_url if article.original_url?
   %time

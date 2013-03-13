@@ -72,3 +72,9 @@ step 'I click the delete article link' do
     click_on 'Delete'
   end
 end
+
+step 'I should see that the article is unread' do
+  within("#article-#{@article.id}") do
+    page.should have_content "Unread"
+  end
+end
