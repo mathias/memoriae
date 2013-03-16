@@ -11,6 +11,13 @@
       %li
         Captured on:
         %time= article.date_ingested.to_date.to_formatted_s(:long_ordinal) if article.date_ingested?
+      %li.read-status
+        = article.read_status
+      %li
+        - value, word = article.mark_as_read_form_values
+        = form_for article, method: :patch do |f|
+          = f.hidden_field :read, value: value
+          = f.submit "Mark as #{word}"
 
   .entry-content
     = sanitize article.body

@@ -62,7 +62,7 @@ step 'I change the URL and submit it' do
 end
 
 step 'I should see the changed URL for that article' do
-  within('#article_list') do
+  within("#article-#{@article.id}") do
     page.should have_content @new_article_domain
   end
 end
@@ -74,7 +74,45 @@ step 'I click the delete article link' do
 end
 
 step 'I should see that the article is unread' do
-  within("#article-#{@article.id}") do
+  within("#article-#{@article.id} .read-status") do
     page.should have_content "Unread"
   end
+end
+
+step 'I should see that the article is read' do
+  within("#article-#{@article.id} .read-status") do
+    page.should have_content "Read"
+  end
+end
+
+step 'I mark the article as read' do
+  within("#article-#{@article.id}") do
+    click_on "Mark as Read"
+  end
+end
+
+step 'I mark the article as unread' do
+  within("#article-#{@article.id}") do
+    click_on "Mark as Unread"
+  end
+end
+
+step 'I should see that both articles are unread' do
+  @articles.each do |article|
+    within("#article-#{article.id} .read-status") do
+      page.should have_content "Unread"
+    end
+  end
+end
+
+step 'I should see that both articles are read' do
+  @articles.each do |article|
+    within("#article-#{article.id} .read-status") do
+      page.should have_content "Read"
+    end
+  end
+end
+
+step 'I mark all articles as read' do
+  click_on 'Mark all as Read'
 end

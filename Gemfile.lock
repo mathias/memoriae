@@ -65,6 +65,10 @@ GEM
       orm_adapter (~> 0.0.3)
       warden (~> 1.1)
     diff-lcs (1.2.1)
+    draper (1.1.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0.3)
     erubis (2.7.0)
     eventmachine (1.0.1)
     execjs (1.4.0)
@@ -159,6 +163,7 @@ GEM
     redis (3.0.3)
     redis-namespace (1.2.1)
       redis (~> 3.0.0)
+    request_store (1.0.5)
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -254,6 +259,7 @@ DEPENDENCIES
   database_cleaner
   decent_exposure
   devise
+  draper
   factory_girl
   factory_girl_rails
   faker

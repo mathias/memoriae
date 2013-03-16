@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  expose(:articles) { Article.scoped.order('date_ingested DESC') }
+  expose(:articles)
   expose(:article, attributes: :article_params)
 
   def new
@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
   def update
     if article.save
-      redirect_to(articles_path)
+      redirect_to(article_path(article))
     else
       render :edit
     end
@@ -29,9 +29,14 @@ class ArticlesController < ApplicationController
     redirect_to(articles_path)
   end
 
+  def mark_all_as_read
+    articles.update_all(read: true)
+    redirect_to(articles_path)
+  end
+
   private
 
   def article_params
-    params.require(:article).permit(:original_url)
+    params.require(:article).permit(:original_url, :read)
   end
 end

@@ -9,5 +9,11 @@ FactoryGirl.define do
       date_ingested { Time.now }
       ingest_state { 'ingested' }
     end
+
+    trait :read do
+      read true
+    end
+
+    factory :read_article, traits: [:ingested, :read]
   end
 end

@@ -4,6 +4,7 @@ Memoriae::Application.routes.draw do
   resources :articles do
     resources :notes
   end
+  post '/mark_all_articles_as_read' => 'articles#mark_all_as_read'
 
   devise_for :users
 

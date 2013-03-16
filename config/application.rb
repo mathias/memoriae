@@ -32,5 +32,7 @@ module Memoriae
     config.to_prepare do
       Devise::SessionsController.layout "session"
     end
+
+    config.autoload_paths += Dir["#{config.root}/lib/decent_exposure/"]
   end
 end
