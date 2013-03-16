@@ -2,4 +2,4 @@
   = link_to 'Add +', new_article_path, class: 'articles_button'
   = button_to 'Mark all as Read', mark_all_articles_as_read_path, method: :post, class: 'articles_button'
 %ul#article_list
-  = render partial: 'article_link', collection: articles, as: :article
+  = render partial: 'article_link', collection: sorted_articles, as: :article

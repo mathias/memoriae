@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   expose(:articles)
   expose(:article, attributes: :article_params)
+  expose(:sorted_articles) { articles.order('created_at DESC').decorate }
 
   def new
     if params.has_key?("url")
