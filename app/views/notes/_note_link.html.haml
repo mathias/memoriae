@@ -1,0 +1,6 @@
+%li{id: "note-#{note.id}"}
+  %h2= link_to note.title, note_path(note)
+  %time
+    = note.created_at
+  = link_to "Edit", edit_note_path(note)
+  = button_to "Delete", note_path(note), data: { confirm: 'Are you sure?' }, method: :delete

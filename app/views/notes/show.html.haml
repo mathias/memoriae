@@ -1,0 +1,17 @@
+%article{id: "note-#{note.id}"}
+  %header
+    %h2= note.title
+
+  %footer
+    %ul
+      %li
+        Created:
+        %time= note.created_at.to_date.to_formatted_s(:long_ordinal)
+      %li
+        Last Updated:
+        %time= note.updated_at.to_date.to_formatted_s(:long_ordinal)
+      %li
+        = link_to 'Edit', edit_note_path(note)
+
+  .entry-content
+    = sanitize note.body

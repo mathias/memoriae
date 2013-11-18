@@ -1,0 +1,5 @@
+#actions
+  = link_to 'Add +', new_note_path, class: 'notes_button'
+
+%ul#notes_list
+  = render partial: 'note_link', collection: notes, as: :note
