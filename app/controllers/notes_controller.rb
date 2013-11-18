@@ -1,12 +1,5 @@
 class NotesController < ApplicationController
   expose(:notes)
   expose(:note)
-
-  def index
-    render json: notes
-  end
-
-  def show
-    render json: note
-  end
+  expose(:sorted_notes) { notes.order('created_at DESC').decorate }
 end
