@@ -26,11 +26,9 @@ gem 'high_voltage'
 gem 'httparty'
 gem 'idkfa'
 gem 'jquery-rails'
-gem 'neat'
 gem 'puma'
 gem 'sidekiq'
 gem 'sinatra', '>= 1.3.0', :require => nil
-gem 'slim'
 gem 'turbolinks'
 gem 'underscore-rails'
 
