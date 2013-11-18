@@ -1,8 +1,6 @@
 class Article < ActiveRecord::Base
   include AASM
 
-  has_many :notes
-
   after_create :ingest_article
 
   aasm column: 'ingest_state' do
