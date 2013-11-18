@@ -49,6 +49,7 @@ group :development, :test do
   gem 'factory_girl'
   gem 'faker'
   gem 'pry-rails'
+  gem 'pry-debugger'
   gem 'rspec-rails'
 end
 
