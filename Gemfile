@@ -14,6 +14,7 @@ group :assets do
 end
 
 gem 'aasm'
+gem 'ace-rails-ap'
 gem 'active_model_serializers'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'decent_exposure'
@@ -27,6 +28,7 @@ gem 'httparty'
 gem 'idkfa'
 gem 'jquery-rails'
 gem 'puma'
+gem 'slim'
 gem 'sidekiq'
 gem 'sinatra', '>= 1.3.0', :require => nil
 gem 'turbolinks'

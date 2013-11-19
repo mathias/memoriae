@@ -15,7 +15,7 @@
           %h1 Memoriae
         = render 'shared/navigation'
 
-    .container
+    %div{class: "container #{controller.controller_name}-#{controller.action_name}"}
       = yield
 
     %footer
