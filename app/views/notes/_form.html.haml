@@ -1,7 +1,10 @@
 = semantic_form_for note do |f|
   = f.inputs do
     = f.input :title, as: :string, label: "Title"
-    = f.input :body, as: :text, label: "Body"
+    = f.input :body, as: :text, label: "Body", input_html: { class: 'hidden' }
+    .editor-container
+      #note-editor= note.body
+    .preview
 
   = f.actions do
     = f.action :submit

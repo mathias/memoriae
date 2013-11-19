@@ -6,7 +6,7 @@
 //= require turbolinks
 //= require showdown
 //= require ace/ace
-//= require ace/theme-dawn
+//= require ace/theme-twilight
 //= require ace/mode-markdown
 //= require ace
 //= require underscore
