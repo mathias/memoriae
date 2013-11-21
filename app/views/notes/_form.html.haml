@@ -3,7 +3,7 @@
     = f.input :title, as: :string, label: "Title"
     = f.input :body, as: :text, label: "Body", input_html: { class: 'hidden' }
     .editor-container
-      #note-editor= note.body
+      %pre#note-editor= note.body
     .preview
 
   = f.actions do

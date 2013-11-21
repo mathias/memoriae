@@ -4,9 +4,11 @@ form.note {
   }
 
   .editor-container {
+    float: left;
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 600px;
+    margin: 0 25px;
 
     #note-editor {
       margin: 0;
@@ -17,5 +19,10 @@ form.note {
       left: 0;
       right: 0;
     }
+  }
+
+  .preview {
+    width: 45%;
+    float: left;
   }
 }

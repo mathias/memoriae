@@ -14,4 +14,5 @@
         = link_to 'Edit', edit_note_path(note)
 
   .entry-content
-    = sanitize note.body
+    %pre#note-body.hidden= note.body
+    .preview
