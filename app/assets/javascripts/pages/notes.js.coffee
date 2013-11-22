@@ -1,3 +1,4 @@
+pageChange '.notes-create', aceEditorInit
 pageChange '.notes-edit', aceEditorInit
 pageChange '.notes-new', aceEditorInit
 
