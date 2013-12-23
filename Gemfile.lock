@@ -168,6 +168,9 @@ GEM
     redis-namespace (1.2.1)
       redis (~> 3.0.0)
     request_store (1.0.5)
+    rethinkdb (1.8.0.0)
+      json
+      ruby-protocol-buffers
     rspec (2.13.0)
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
@@ -183,6 +186,7 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
+    ruby-protocol-buffers (1.5.1)
     ruby_parser (3.1.1)
       sexp_processor (~> 4.1)
     rubyzip (0.9.9)
@@ -281,6 +285,7 @@ DEPENDENCIES
   pry-debugger
   pry-rails
   rails (= 4.0.2)
+  rethinkdb
   rspec-rails
   ruby_parser
   sass-rails (~> 4.0.0)
